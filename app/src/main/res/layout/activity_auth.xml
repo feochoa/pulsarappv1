@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AuthFuncActivity"
+    android:orientation="vertical">
+
+    <com.dawn.java.ui.widget.TopToolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle="授权"
+        app:srcLeftIcon="@drawable/icon_return" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioBtnAdb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="USB通讯"
+                />
+            <RadioButton
+                android:id="@+id/radioBtnWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                  android:text="网络通讯"
+                />
+        </RadioGroup>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_auth"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/border_text_scan_result"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scrollbars="vertical"
+                android:textSize="16dp" />
+        </LinearLayout>
+    <Button
+        android:id="@+id/btn_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:background="@drawable/selector_btn_blue"
+        android:visibility="gone"
+        android:text="扫IP地址"/>
+    <Button
+        android:id="@+id/btn_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:background="@drawable/selector_btn_blue"
+        android:text="开启授权线程"/>
+
+
+</LinearLayout>
